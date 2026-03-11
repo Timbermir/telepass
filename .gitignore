@@ -1,0 +1,16 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+### VS Code ###
+.vscode/
+
+### Rust ###
+target
+.cargo
+
+### Mac OSX ###
+.DS_STORE
