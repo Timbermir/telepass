@@ -1,7 +1,10 @@
 [package]
 name = "telepass"
 version = "1.0.0"
+license = "MIT"
 edition = "2024"
+description = "Telegram Mini App init data validation and parsing"
+repository = "https://github.com/Timbermir/telepass"
 
 [dependencies]
 hex = { version = "0.4.3" }
