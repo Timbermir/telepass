@@ -2,6 +2,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(rename_all = "lowercase")]
+#[cfg_attr(feature = "utoipa", derive(utoipa::ToSchema))]
 pub enum ChatType {
     Sender,
     Private,
@@ -11,6 +12,7 @@ pub enum ChatType {
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
+#[cfg_attr(feature = "utoipa", derive(utoipa::ToSchema))]
 pub struct Chat {
     pub id: i64,
     #[serde(rename = "type")]

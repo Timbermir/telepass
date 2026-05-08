@@ -2,12 +2,12 @@ use crate::chat::{Chat, ChatType};
 use crate::error::TelepassError;
 use crate::sign::sign;
 use crate::user::User;
-use hmac::Mac;
 use serde::{Deserialize, Serialize};
 use serde_json::{Map, Value};
 use std::collections::HashSet;
 use std::time::{Duration, SystemTime, UNIX_EPOCH};
 
+#[cfg_attr(feature = "utoipa", derive(utoipa::ToSchema))]
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct InitData {
     #[serde(rename = "auth_date")]

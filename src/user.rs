@@ -2,6 +2,7 @@ use serde;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
+#[cfg_attr(feature = "utoipa", derive(utoipa::ToSchema))]
 pub struct User {
     pub id: i64,
     #[serde(default, skip_serializing_if = "Option::is_none")]
